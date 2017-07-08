@@ -1,24 +1,34 @@
-/* Goal
-1. [1]でコメントになっている部分を、戻し、結果を確認してください
-2. [2]でコメントになっている部分を、戻し、結果を確認してください
-*/
 
 let point = 0;
 let question = "This is a song for everybody who needs love."
+
 /**
  keyイベントのハンドラ
  */
+
 function keyup(event) {
+
   // let typedKey = event.key; // 入力されたキーを表す文字列
+
   let output = document.querySelector("#output2");
   output = output.value
   let pointElement = document.querySelector("#point");
+
+  pointer = document.getElementById("#output2").value.length
+
+  if (pointer == question.length) {
+    TF = 1
+  }
+
+
   // output.textContent = typedKey;
   // if (output[point] != question[point]) {
   //   point = point + 1;
   // }
   // // point <= question.length
   // pointElement.textContent = point;
+
+
 }
 
 /*
@@ -34,14 +44,30 @@ function autoWriting(index) {
   element.textContent = toShow;
 }
 
-function autoWritingLoop(maxCount, i) { //1秒ごとに文字を自動表示
+var TF = 0;
+
+function autoWritingLoop(maxCount, i, time, TF) { //1秒ごとに文字を自動表示
   if (i <= maxCount) {
     autoWriting(i);
-    setTimeout(function () { autoWritingLoop(maxCount, ++i) }, 1000);  //1000ミリ秒
+    setTimeout(function () { autoWritingLoop(maxCount, ++i, time, TF) }, time);  //1000ミリ秒
   }
-  else if (maxCount < output) {
-    alert("finish!")
+
+  else if (maxCount < i) {
+    if (TF == 0) {
+      alert("finish!");
+    }
+    else {
+      alert("you win! yahoooooo!");
+    }
   }
+}
+
+function start(time) {
+  let questionElement = document.querySelector("#question");
+  questionElement.textContent = question;
+  let maxCount = question.length;
+  i = 0;
+  autoWritingLoop(maxCount, i, time)
 }
 
 
@@ -54,7 +80,7 @@ function main() {
 
   let questionElement = document.querySelector("#question");
   questionElement.textContent = question;
-  autoWritingLoop(question.length, 0);
+  // autoWritingLoop(question.length, 0);
 }
 
 
