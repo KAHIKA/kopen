@@ -2,6 +2,15 @@
 let point = 0;
 let question = "This is a song for everybody who needs love."
 
+
+
+let questionlist = ["This is a song for everybody who needs love.", "asdf"]
+
+　function selectQestion(num) {
+  question = questionlist[num];
+  return question;
+}
+
 /**
  keyイベントのハンドラ
  */
@@ -72,6 +81,16 @@ function start(time) {
 
 
 //autoWritingLoop(文字数, 0)
+
+
+
+function go_page(next_page, delet_page) {
+  console.log(next_page, delet_page);
+  document.getElementById("page2").style.display = "block";
+  document.getElementById("page1").scroll.display = "none";
+  console.log("hello");
+}
+
 
 
 function main() {
