@@ -1,26 +1,103 @@
 <!doctype html>
 <html>
 
-<head>
+<!--<head>
   <title>イベントハンドラ</title>
   <meta charset="utf-8">
   <link rel="stylesheet" href="index.css">
   <script src="index.js"></script>
+</head>-->
+
+<head>
+  <script src="index.js"></script>
 </head>
 
 <body>
-  <div class="container">
-    <h1>イベントハンドラ</h1>
+
+  <div id = "page1">
     <h2>Question</h2>
-    <div id="autoWriting"></div>  
+    <div id="autoWriting"></div>
+    <p id="question">N/A</p>
+
+
     <p id="question"></p>
-    <P> Point = <span i="point">0</span></p>
-     <div id="output"></div>
+    <p id="question2"></p>
+
+    <input type="button" value="1000" onclick=" ">
+    <input type="button" value="500" onclick=" ">
+    <input type="button" value="100" onclick=" ">
+    <p></p>
+    <form name="keyup">
+      <!--<p> Point = <span id="point">0</point></p>-->
+      <textarea id="output2" onload="keyup()"></textarea>
+    </form>
     
-    <textarea id="source"></textarea>
+    <p> 
+    <input type="button" value ="Next Question" onclick="go_page('page2','page1')">
+    </p>
+  </div>
+
+  <div id = "page2" steyle = "display:none">
+    <h2>Question</h2>
+    <div id="autoWriting"></div>
+    <p id="question">A</p>
 
 
-    <!--<div>
+    <p id="question"></p>
+    <p id="question2"></p>
+
+    <input type="button" value="1000" onclick=" ">
+    <input type="button" value="500" onclick=" ">
+    <input type="button" value="100" onclick=" ">
+    <p></p>
+    <form name="keyup">
+      <!--<p> Point = <span id="point">0</point></p>-->
+      <textarea id="output2" onload="keyup()"></textarea>
+    </form>
+    
+    <p> 
+    <input type="button" value ="Next Question" onclick="go_page3();">
+    </p>
+  </div>
+
+
+</body>
+
+
+<!--/////-->
+
+<!--<body>
+   <div class="container">
+     <h1>イベントハンドラ</h1>
+-    <div>
++    <h2>Question</h2>
++    <div id="autoWriting"></div>  
++    <p id="question"></p>
++    <P> Point = <span i="point">0</span></p>
+    +
+    <div id="output"></div>
+    + + <textarea id="source"></textarea> + + +-->
+<!--<div>
+       <h2>入力</h2>
+       <textarea id="source"></textarea>
+     </div>
+@@ -22,6 +31,7 @@
+     <div class="controls">
+       <button>リセット</button>
+     </div>
++    -->
+</div>
+</body>
+
+
+
+
+
+
+
+<!--<div class="container">
+    <h1>イベントハンドラ</h1>
+    <div>
       <h2>入力</h2>
       <textarea id="source"></textarea>
     </div>
@@ -31,8 +108,6 @@
     <div class="controls">
       <button>リセット</button>
     </div>
-    -->
-  </div>
-</body>
+  </div>-->
 
 </html>
