@@ -1,7 +1,7 @@
 
 body {
   color: #000000;  /* 全体の文字色 */
-  font-size: x-large;
+  font-size: x-large; /* 全体のフォントのサイズ */
   background-image: url("background.jpg");
   background-position: center center;/* 画像を常に天地左右の中央に配置 */
   background-repeat: no-repeat;/* 画像をタイル状に繰り返し表示しない */
@@ -22,4 +22,9 @@ h1 {
 textarea{
   height: 5rem;
   width: 40%;
+}
+
+h6{
+  color: #FF0066;
+  font-weight: bolder;
 }
