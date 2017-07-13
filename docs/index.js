@@ -1,43 +1,29 @@
 
 let point = 0;
-let question = "This is a song for everybody who needs love."
+let question = "Laughter is timeless. Imagination has no age. And dreams are forever."
 
 
 
-let questionlist = ["This is a song for everybody who needs love.", "asdf"]
+let questionlist = ["Laughter is timeless. Imagination has no age. And dreams are forever.", "asdf"]
+
+
 
 　function selectQestion(num) {
   question = questionlist[num];
   return question;
 }
 
-/**
+/*
  keyイベントのハンドラ
  */
 
 function keyup(event) {
 
-  // let typedKey = event.key; // 入力されたキーを表す文字列
 
   let output = document.querySelector("#output2");
   output = output.value
   let pointElement = document.querySelector("#point");
-
-  pointer = document.getElementById("#output2").value.length
-
-  if (pointer == question.length) {
-    TF = 1
-  }
-
-
-  // output.textContent = typedKey;
-  // if (output[point] != question[point]) {
-  //   point = point + 1;
-  // }
-  // // point <= question.length
-  // pointElement.textContent = point;
-
-
+  let pointer = document.getElementById("#output2").value.length
 }
 
 /*
@@ -55,21 +41,16 @@ function autoWriting(index) {
 
 var TF = 0;
 
-function autoWritingLoop(maxCount, i, time, TF) { //1秒ごとに文字を自動表示
+function autoWritingLoop(maxCount, i, time) { //1秒ごとに文字を自動表示
   if (i <= maxCount) {
     autoWriting(i);
-    setTimeout(function () { autoWritingLoop(maxCount, ++i, time, TF) }, time);  //1000ミリ秒
+    setTimeout(function () { autoWritingLoop(maxCount, ++i, time/*, TF*/) }, time);  //1000ミリ秒
   }
-
-  else if (maxCount < i) {
-    if (TF == 0) {
-      alert("finish!");
-    }
-    else {
-      alert("you win! yahoooooo!");
-    }
+  else if (i >= maxCount) {
+    alert("finish!");
   }
 }
+
 
 function start(time) {
   let questionElement = document.querySelector("#question");
@@ -82,8 +63,6 @@ function start(time) {
 
 //autoWritingLoop(文字数, 0)
 
-
-
 function go_page(next_page, delet_page) {
   console.log(next_page, delet_page);
   document.getElementById("page2").style.display = "block";
@@ -92,16 +71,12 @@ function go_page(next_page, delet_page) {
 }
 
 
-
 function main() {
   document.body.addEventListener("keyup", keyup); // body要素で起きるキーイベントのハンドラを設定
   document.body.focus(); // body要素にキーボードフォーカスを移動
-
   let questionElement = document.querySelector("#question");
   questionElement.textContent = question;
-  // autoWritingLoop(question.length, 0);
 }
-
 
 
 window.addEventListener("load", main);　//これがあると全部をロード(読み込んだ)した後に動く

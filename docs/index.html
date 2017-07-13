@@ -1,12 +1,6 @@
 <!doctype html>
 <html>
 
-<!--<head>
-  <title>イベントハンドラ</title>
-  <meta charset="utf-8">
-  <link rel="stylesheet" href="index.css">
-  <script src="index.js"></script>
-</head>-->
 
 <head>
   <link rel="stylesheet" type="text/css" href="index.css">
@@ -15,88 +9,30 @@
 </head>
 
 <body>
-  <h2>Question</h2>
-  <div id="autoWriting"></div>
-  <p id="question">N/A</p>
+  <center>
+
+    <h1>SPEED Typing</h1>
+    <h3>達人のタイピングスピードを手に入れよう！</h3>
+    <br> 【Question】
+    <div id="autoWriting"></div>
+    <p id="question">N/A</p>
 
 
-  <p id="question"></p>
-  <p id="question2"></p>
+    <p id="question"></p>
+    <p id="question2"></p>
 
-  <input type="button" value="1000" onclick="start(1000)">
-  <input type="button" value="500" onclick="start(500)">
-  <input type="button" value="100" onclick="start(100)">
-  <p></p>
-  <form name="keyup">
-    <!--<p> Point = <span id="point">0</point></p>-->
-    <textarea id="output2" onload="keyup()"></textarea>
-
-    <p>
-      <input type="button" value="Next Question" onclick="go_page('page2','page1')">
-    </p>
-    </div>
-
-    <div id="page2" steyle="display:none">
-      <h2>Question</h2>
-      <div id="autoWriting"></div>
-      <p id="question">A</p>
-
-
-      <p id="question"></p>
-      <p id="question2"></p>
-
-      <input type="button" value="1000" onclick=" ">
-      <input type="button" value="500" onclick=" ">
-      <input type="button" value="100" onclick=" ">
-      <p></p>
-  </form>
+    <input type="button" value="素人" onclick="start(1000)" style="width: 100px; height: 24px">
+    <input type="button" value="平凡" onclick="start(500)" style="width: 100px; height: 24px">
+    <input type="button" value="達人" onclick="start(100)" style="width: 100px; height: 24px">
+    <p></p>
+    <form name="keyup">
+      <textarea id="output2" onload="keyup()"></textarea>
+      <p>
+        <input type="button" value="Next Question" onclick="go_page('page2','page1')" style="width: 120px; height: 24px">
+      </p>
+      </div>
+      </div>
+  </center>
 </body>
-
-
-<!--/////-->
-
-<!--<body>
-   <div class="container">
-     <h1>イベントハンドラ</h1>
--    <div>
-+    <h2>Question</h2>
-+    <div id="autoWriting"></div>  
-+    <p id="question"></p>
-+    <P> Point = <span i="point">0</span></p>
-    +
-    <div id="output"></div>
-    + + <textarea id="source"></textarea> + + +-->
-<!--<div>
-       <h2>入力</h2>
-       <textarea id="source"></textarea>
-     </div>
-@@ -22,6 +31,7 @@
-     <div class="controls">
-       <button>リセット</button>
-     </div>
-+    -->
-</div>
-</body>
-
-
-
-
-
-
-
-<!--<div class="container">
-    <h1>イベントハンドラ</h1>
-    <div>
-      <h2>入力</h2>
-      <textarea id="source"></textarea>
-    </div>
-    <div>
-      <h2>出力</h2>
-      <textarea id="dest" disabled></textarea>
-    </div>
-    <div class="controls">
-      <button>リセット</button>
-    </div>
-  </div>-->
 
 </html>
